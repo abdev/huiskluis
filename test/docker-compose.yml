@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  database:
+        image: mysql:5.7.21
+        restart: always       
+        environment:
+            - MYSQL_DATABASE=web_app_development
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_USER=test
+            - MYSQL_PASSWORD=test
+        ports:
+            - "8989:3306"
